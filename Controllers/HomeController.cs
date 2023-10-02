@@ -27,14 +27,16 @@ public class HomeController : Controller
         {
             return RedirectToAction("Index", "Home");
         }
-
-        ViewBag.MensajeError = "Nombre de usuario o contraseña incorrectos";
-        return View();
+        else 
+        {
+            ViewBag.MensajeError = "Nombre de usuario o contraseña incorrectos";
+            return View();
+        }
     }
 
     public IActionResult Registro()
     {
-        return View("Index");
+        return View();
     }
 
     [HttpPost]
