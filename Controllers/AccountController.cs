@@ -1,8 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace TP_Login.Controllers;
 
-public class HomeController : Controller
+public class AccountController : Controller
 {
 
     public IActionResult Index(string username, string contraseña)
@@ -74,7 +74,7 @@ public class HomeController : Controller
     }
 
     public string GetPaginaInicioUrl()
-    {   
+    {
         return Url.Action("PaginaInicio", "Home");
     }
 

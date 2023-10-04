@@ -5,4 +5,18 @@ public class Usuario
     public string Contraseña { get; set; }
     public string Mail { get; set; }
     public string Telefono { get; set; }
+
+    public Usuario()
+    {
+
+    }
+
+    public Usuario(int id, string username, string contraseña, string mail, string telefono)
+    {
+        Id = id;
+        UserName = username;
+        Contraseña = contraseña;
+        Mail = mail;
+        Telefono = telefono;
+    }
 } 
