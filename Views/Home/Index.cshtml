@@ -4,25 +4,23 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
 </head>
+
 <body>
     <div class="container">
         <h1>Iniciar Sesión</h1>
-        @if (!string.IsNullOrEmpty(ViewBag.MensajeError))
-        {
-            <div class="alert alert-danger">@ViewBag.MensajeError</div>
-        }
-        <form action='@Url.Action("Login", "Home")' id="login-form">
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="contraseña">Contraseña:</label>
+        <form method="post" action='@Url.Action("Login", "Home")' id="login-form">
+            <label for="UserName">Usuario:</label>
+            <input type="text" id="UserName" name="UserName" required>
+            <label for="Contraseña">Contraseña:</label>
             <div class="password-input">
-                <input type="password" name="contraseña" id="contraseña" required>
+                <input type="password" name="Contraseña" id="Contraseña" required>
                 <i class="fas fa-eye" id="toggle-password"></i>
             </div>
             <button type="submit">Iniciar Sesión</button>
@@ -33,4 +31,5 @@
     <script src="~/js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>

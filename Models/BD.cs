@@ -5,51 +5,41 @@ public static class BD
 {
     private static string _ConnectionString = @"Server=localhost; DataBase=loginDB; Trusted_Connection=True;";
 
-    public static List<Usuario> ObtenerUsuario()
+    public static Usuario ObtenerUsuario(string username)
     {
-        List<Usuario> _ListadoUsuarios;
+        string SQL = "SELECT * From Usuario WHERE UserName = @username";
         using (SqlConnection db = new SqlConnection(_ConnectionString))
         {
-            string SQL = "SELECT * From Usuario";
-            _ListadoUsuarios = db.Query<Usuario>(SQL).ToList();
-        }
-        return _ListadoUsuarios;
-    }
-
-    public static bool VerificarDatosLogin(string username, string contraseña)
-    {
-        string SQL = "SELECT * From Usuario WHERE UserName = @pUserName AND Contraseña = @pContraseña";
-        Usuario datos = null;
-        using (SqlConnection db = new SqlConnection(_ConnectionString))
-        {
-            datos = db.QueryFirstOrDefault<Usuario>(SQL, new {pContraseña = contraseña, pUserName = username});
-        }
-
-        if (datos == null)
-        {
-            return false;
-        }
-        else 
-        {
-            return true;
+            return db.QueryFirstOrDefault<Usuario>(SQL, new {username});
         }
     }
 
-    public static void GuardarUsuario(Usuario usuario)
+    public static Usuario VerificarDatosLogin(string username, string contraseña)
     {
-        string SQL = "INSERT INTO Usuario (UserName, Contraseña) VALUES (@pUserName, @pContraseña)";
+        Usuario usuario = null;
         using (SqlConnection db = new SqlConnection(_ConnectionString))
         {
-            db.Execute(SQL, new { pUserName = usuario.UserName, pContraseña = usuario.Contraseña });
+            string SQL = "SELECT * FROM Usuario WHERE UserName = @pUserName AND Contraseña = @pContraseña";
+            usuario = db.QueryFirstOrDefault<Usuario>(SQL, new { pUserName = username, pContraseña = contraseña });
+        }
+        return usuario;
+    }
+
+    public static void GuardarUsuario(string username, string contraseña)
+    {
+        using (SqlConnection db = new SqlConnection(_ConnectionString))
+        {
+            string SQL = "INSERT INTO Usuario (UserName, Contraseña) VALUES (@pUserName, @pContraseña)";
+            db.Execute(SQL, new { pUserName = username, pContraseña = contraseña });
         }
     }
 
-    public static void ActualizarUsuario(Usuario usuario)
+    public static void ActualizarUsuario(string username, string contraseña)
     {
-        string SQL = "UPDATE Usuario SET Contraseña = @Contraseña WHERE UserName = @UserName";
         using (SqlConnection db = new SqlConnection(_ConnectionString))
         {
-            db.Execute(SQL);
+            string SQL = "UPDATE Usuario SET Contraseña = @pContraseña WHERE UserName = @pUserName";
+            db.Execute(SQL, new { pUserName = username, pContraseña = contraseña });
         }
     }
 }

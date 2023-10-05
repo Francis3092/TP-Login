@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("login-form");
-    const passwordField = document.getElementById("password");
+    const passwordField = document.getElementById("Contraseña"); // Cambiado a "Contraseña"
     const togglePasswordButton = document.getElementById("toggle-password");
 
     togglePasswordButton.addEventListener("click", function () {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const username = document.getElementById("username").value;
+        const username = document.getElementById("UserName").value; // Cambiado a "UserName"
         const password = passwordField.value;
 
         if (!isValidPassword(password)) {
@@ -21,14 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (simulatedLogin(username, password)) {
-            showSuccessAlert("Inicio de sesión exitoso. ¡Bienvenido!");
-            setTimeout(function () {
-                window.location.href = '@Url.Action("PaginaInicio", "Home")';
-            }, 2000);
-        } else {
-            showErrorAlert("Inicio de sesión fallido. Verifica tus credenciales.");
-        }
+        // Elimina la función simulatedLogin y utiliza la redirección directa
+        showSuccessAlert("Inicio de sesión exitoso. ¡Bienvenido!");
+        setTimeout(function () {
+            window.location.href = '/Home/PaginaInicio'; // Ruta de acción directa
+        }, 2000);
     });
 
     function isValidPassword(password) {
@@ -61,10 +58,5 @@ document.addEventListener("DOMContentLoaded", function () {
             confirmButtonColor: '#28a745',
             confirmButtonText: 'OK'
         });
-    }
-
-    function simulatedLogin(username, password) {
-       
-        return true; 
     }
 });

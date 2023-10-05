@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const registrationForm = document.getElementById("registration-form");
-    const passwordField = document.getElementById("password");
+    const passwordField = document.getElementById("Contraseña");
     const togglePasswordButton = document.getElementById("toggle-password");
 
     togglePasswordButton.addEventListener("click", function () {
@@ -8,30 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
         passwordField.setAttribute("type", type);
         togglePasswordButton.classList.toggle("fa-eye-slash");
         togglePasswordButton.classList.toggle("fa-eye");
-    });
-
-    function getPaginaInicioUrl() {
-        return new Promise(function(resolve, reject) {
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        resolve(xhr.responseText);
-                    } else {
-                        reject(xhr.statusText);
-                    }
-                }
-            };
-            xhr.open("GET", "/Home/GetPaginaInicioUrl", true);
-            xhr.send();
-        });
-    }    
+    });   
 
     registrationForm.addEventListener("submit", function (e) {
         e.preventDefault();
     
-        const username = document.getElementById("username").value;
-        const password = passwordField.value;
+        const username = document.getElementById("UserName").value; 
+        const password = document.getElementById("Contraseña").value; 
         const confirmPassword = document.getElementById("confirm-password").value;
     
         if (password !== confirmPassword) {
@@ -46,14 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
         showSuccessAlert("¡Registro completado con éxito!");
     
-        // Obtén la URL de la página de inicio y redirige después de mostrar la alerta
-        getPaginaInicioUrl().then(function(url) {
-            setTimeout(function () {
-                window.location.href = url;
-            }, 2000);
-        }).catch(function(error) {
-            console.error("Error al obtener la URL de la página de inicio:", error);
-        });
     });
 
     function isValidPassword(password) {
