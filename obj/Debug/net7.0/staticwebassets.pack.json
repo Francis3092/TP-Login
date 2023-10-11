@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\TP-Login.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\BDLogin.sql",
+      "PackagePath": "staticwebassets\\BDLogin.sql"
+    },
+    {
       "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,18 +19,6 @@
     {
       "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
-      "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\js\\login.js",
-      "PackagePath": "staticwebassets\\js\\login.js"
-    },
-    {
-      "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\js\\olvidar-contraseña.js",
-      "PackagePath": "staticwebassets\\js\\olvidar-contraseña.js"
-    },
-    {
-      "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\js\\registro.js",
-      "PackagePath": "staticwebassets\\js\\registro.js"
     },
     {
       "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\js\\site.js",
@@ -259,10 +251,6 @@
     {
       "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\login.sql",
-      "PackagePath": "staticwebassets\\login.sql"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.TP-Login.Microsoft.AspNetCore.StaticWebAssets.props",

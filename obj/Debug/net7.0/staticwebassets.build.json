@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "10rRwTNrFE1oDhmQNQxa+Eye1+1wmD6zg9HAhSzOdtQ=",
+  "Hash": "ZcAlCUoMkM2Fmb4odllXa0mdc+leDtWtDku00qU2dU0=",
   "Source": "TP-Login",
   "BasePath": "_content/TP-Login",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP-Login.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\BDLogin.sql",
+      "SourceId": "TP-Login",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\",
+      "BasePath": "_content/TP-Login",
+      "RelativePath": "BDLogin.sql",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\BDLogin.sql"
     },
     {
       "Identity": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\css\\site.css",
@@ -100,57 +117,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\js\\login.js",
-      "SourceId": "TP-Login",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\",
-      "BasePath": "_content/TP-Login",
-      "RelativePath": "js/login.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\login.js"
-    },
-    {
-      "Identity": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\js\\olvidar-contraseña.js",
-      "SourceId": "TP-Login",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\",
-      "BasePath": "_content/TP-Login",
-      "RelativePath": "js/olvidar-contraseña.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\olvidar-contraseña.js"
-    },
-    {
-      "Identity": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\js\\registro.js",
-      "SourceId": "TP-Login",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\",
-      "BasePath": "_content/TP-Login",
-      "RelativePath": "js/registro.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\registro.js"
     },
     {
       "Identity": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\js\\site.js",
@@ -1137,23 +1103,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\login.sql",
-      "SourceId": "TP-Login",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\FRANCISCO-PC\\Desktop\\TP-Login\\wwwroot\\",
-      "BasePath": "_content/TP-Login",
-      "RelativePath": "login.sql",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\login.sql"
     }
   ]
 }

@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
 }
 
-.container {
+.anashe{
     width: 400px;
     background-color: #fff;
     padding: 30px;
@@ -136,4 +136,13 @@ p {
 
 .return-link:hover {
     color: #0056b3;
+}
+
+.botonF{
+    margin-top: 8px;
+    margin-left: 115px;
+}
+
+.fondo{
+    background-color: #111;
 }

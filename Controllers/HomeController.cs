@@ -10,16 +10,19 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Login(string username, string contraseña)
+    public IActionResult VerificarLogin(string username, string contraseña)
     {
-        if (BD.VerificarDatosLogin(username, contraseña) == null)
+        Usuario datos = BD.VerificarDatosLogin(username, contraseña);
+
+        if (datos == null)
         {
-            ViewBag.MensajeError = "Nombre de usuario o contraseña incorrectos";
+            ViewBag.ErrorMessage = "Nombre de usuario o contrasena incorrectos";
             return View("Index");
         }
         else
         {
-            ViewBag.MostrarDatos = BD.VerificarDatosLogin(username, contraseña);
+            ViewBag.MostrarDatos = datos;
+            ViewBag.SuccessMessage = "Inicio de sesión exitoso. ¡Bienvenido!";
             return View("PaginaInicio");
         }
     }
@@ -29,19 +32,11 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Registrarse(string username, string contraseña)
+    public IActionResult Registrarse(string username, string contraseña, string mail, string telefono)
     {
-        Usuario usuarioExistente = BD.ObtenerUsuario(username);
-
-        if (usuarioExistente != null)
-        {
-            return RedirectToAction("Index");
-        }
-        else
-        {
-            BD.GuardarUsuario(username, contraseña);
-            return RedirectToAction("PaginaInicio");
-        }
+        Usuario nuevoUsuario = new Usuario(username, contraseña, mail, telefono);
+        BD.GuardarUsuario(nuevoUsuario);
+        return View("Index");
     }
 
     public IActionResult OlvideMiContraseña()
@@ -51,8 +46,18 @@ public class HomeController : Controller
 
     public IActionResult CambiarContraseña(string username, string contraseña)
     {
-        BD.ActualizarUsuario(username, contraseña);
-        return View("Index");
+        Usuario usuario = BD.ObtenerUsuario(username);
+
+        if (usuario == null)
+        {
+            ViewBag.MensajeError = "Nombre de usuario o contraseña incorrectos";
+            return View("OlvideMiContraseña");
+        }
+        else
+        {
+            BD.ActualizarUsuario(username, contraseña);
+            return View("Index");
+        }
     }
     
     public IActionResult PaginaInicio()
